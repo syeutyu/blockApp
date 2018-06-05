@@ -4,6 +4,7 @@ package com.example.lee.stopapp;
 import android.graphics.drawable.Drawable;
 
 public class Item {
+
     public Item(Drawable image, String name, String root) {
         this.image = image;
         this.name = name;

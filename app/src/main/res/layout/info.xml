@@ -5,6 +5,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#ffffff"
         tools:context=".InfoActivity">
 
         <FrameLayout
@@ -14,7 +15,7 @@
             android:background="@drawable/color">
 
             <ImageView
-                android:id="@+id/applogo"
+                android:id="@+id/appLogo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="30dp"
@@ -38,43 +39,64 @@
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="이름을 입력해주세요" />
+                    android:hint="이름을 입력해주세요"
+                    android:textColor="#212121" />
             </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:textColor="#e96666" />
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/nameLinearLayout">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="260dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/nameLinearLayout"
-                android:layout_margin="15dp">
+            <LinearLayout
+                android:id="@+id/phoneLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </android.support.design.widget.TextInputLayout>
-            <Button
-                android:id="@+id/smsSend"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nameLinearLayout"
+                    android:layout_margin="15dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="000-0000-0000"
+                        android:textColor="#212121" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="전송" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/successText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneLinearLayout"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+        </RelativeLayout>
 
         <Button
+            android:id="@+id/saveUser"
+            android:text="가입"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_margin="20dp" />
-
+            android:layout_margin="40dp" />
     </RelativeLayout>
 </layout>

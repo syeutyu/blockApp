@@ -11,8 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.LayoutInflater;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
             list.add(new Item(activityInfo.loadIcon(manager), activityInfo.loadLabel(manager).toString(), activityInfo.packageName));
         }
         adapter.setList(list);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.setAdapter(adapter);
 

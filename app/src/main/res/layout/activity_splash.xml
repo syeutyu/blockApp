@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6f6f6f"
+    tools:context=".Splash">
+
+    <com.github.glomadrian.grav.GravView
+        android:id="@+id/grav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:colorGenerator="com.github.glomadrian.grav.generator.paint.ArrayColorGenerator"
+        app:array_colors="@array/bubble"
+        app:pointGenerator="com.github.glomadrian.grav.generator.point.RegularPointGenerator"
+        app:regular_cell_size="300"
+        app:regular_variance="200"
+        app:gravGenerator="com.github.glomadrian.grav.generator.grav.BallGenerator"
+        app:ball_from_size="30dp"
+        app:ball_to_size="10dp"
+        app:animationGenerators="@array/BubbleAnimations"
+        app:side_to_side_min_duration="40000"
+        app:side_to_side_max_duration="80000"
+        app:side_to_side_direction="downToUp"
+        app:shake_direction="vertical"
+        app:shake_min_duration="10000"
+        app:shake_max_duration="20000"
+        app:shake_variance="500dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Your Memo"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"
+        android:fontFamily="casual"
+        android:textColor="#ffff"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
